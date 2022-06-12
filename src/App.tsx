@@ -2,7 +2,7 @@ import TicketsTable from '../src/components/table/TicketsTable';
 function App() {
   return (
     <>
-      <div>App components teste</div>
+      <header>App header teste</header>
       <TicketsTable />
     </>
   );

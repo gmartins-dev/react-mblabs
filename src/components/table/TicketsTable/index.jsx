@@ -8,6 +8,7 @@ import {
   TableRow,
   TableCell,
   Paper,
+  Box,
 } from '@mui/material';
 
 function TicketsTable() {
@@ -31,7 +32,7 @@ function TicketsTable() {
             <TableCell>Descrição</TableCell>
             <TableCell>Data</TableCell>
             <TableCell>Cidade</TableCell>
-            <TableCell>Online</TableCell>
+            <TableCell>Local</TableCell>
             <TableCell>Tipo</TableCell>
             <TableCell>Vagas</TableCell>
             <TableCell>Preço</TableCell>
@@ -64,9 +65,36 @@ function TicketsTable() {
               <TableCell>{ticketsRow.ticketDate}</TableCell>
               <TableCell>{ticketsRow.ticketCity}</TableCell>
               <TableCell>
-                {ticketsRow.ticketOnline}
+                <Box
+                  sx={{
+                    display: 'flex',
+                    flexDirection: 'row',
+                    alignItems: 'center',
+                    gap: '5px',
+                  }}
+                >
+                  <Box
+                    sx={{
+                      width: '10px',
+                      height: '10px',
+                      backgroundColor:
+                        ticketsRow.ticketOnline === true
+                          ? 'green'
+                          : 'gray',
+                      borderRadius: '50px',
+                    }}
+                  />
+                  {ticketsRow.ticketOnline === true
+                    ? 'Online'
+                    : 'Presencial'}
+                </Box>
               </TableCell>
-              <TableCell>{ticketsRow.ticketType}</TableCell>
+
+              <TableCell>
+                {ticketsRow.ticketType === true
+                  ? 'Empresarial'
+                  : 'Acadêmico'}
+              </TableCell>
               <TableCell>
                 {ticketsRow.ticketAvailable}
               </TableCell>
