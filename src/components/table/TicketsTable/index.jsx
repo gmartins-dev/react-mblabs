@@ -9,15 +9,20 @@ import {
   TableCell,
   Paper,
   Box,
+  LinearProgress,
+  TableFooter,
 } from '@mui/material';
 
 function TicketsTable() {
   const [ticketsList, setTicketsList] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+    setIsLoading(true);
     async function fetchData() {
       const { data } = await api.get('/tickets');
       setTicketsList(data);
+      setIsLoading(false);
     }
     fetchData();
   }, []);
@@ -35,8 +40,12 @@ function TicketsTable() {
       marginBottom="50px"
       gap={1}
     >
-      <TableContainer component={Paper}>
-        <Table arial-label="simple table">
+      <TableContainer
+        component={Paper}
+        variant="outlined"
+        sx={{ m: 1, width: 'auto' }}
+      >
+        <Table arial-label="simple table" stickyHeader>
           <TableHead>
             <TableRow>
               <TableCell>Avatar</TableCell>
@@ -122,6 +131,11 @@ function TicketsTable() {
               </TableRow>
             ))}
           </TableBody>
+          <TableFooter>
+            {isLoading && (
+              <LinearProgress variant="indeterminate" />
+            )}
+          </TableFooter>
         </Table>
       </TableContainer>
     </Box>
