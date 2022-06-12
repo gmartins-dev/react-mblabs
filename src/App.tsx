@@ -1,4 +1,4 @@
-import TicketsTable from '../src/components/table/TicketsTable/index.jsx';
+import TicketsTable from '../src/components/table/TicketsTable';
 function App() {
   return (
     <>
