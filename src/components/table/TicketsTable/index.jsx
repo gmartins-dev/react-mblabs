@@ -53,6 +53,8 @@ function TicketsTable() {
                 <img
                   src={ticketsRow.ticketAvatar}
                   alt={ticketsRow.ticketName}
+                  width="50px"
+                  heigth="50px"
                 />
               </TableCell>
               <TableCell>{ticketsRow.ticketName}</TableCell>
@@ -66,7 +68,7 @@ function TicketsTable() {
               </TableCell>
               <TableCell>{ticketsRow.ticketType}</TableCell>
               <TableCell>
-                {ticketsRow.ticketAvaliable}
+                {ticketsRow.ticketAvailable}
               </TableCell>
               <TableCell>
                 {ticketsRow.ticketPrice}
