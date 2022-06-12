@@ -23,89 +23,108 @@ function TicketsTable() {
   }, []);
 
   return (
-    <TableContainer component={Paper}>
-      <Table arial-label="simple table">
-        <TableHead>
-          <TableRow>
-            <TableCell>Avatar</TableCell>
-            <TableCell>Evento</TableCell>
-            <TableCell>Descrição</TableCell>
-            <TableCell>Data</TableCell>
-            <TableCell>Cidade</TableCell>
-            <TableCell>Local</TableCell>
-            <TableCell>Tipo</TableCell>
-            <TableCell>Vagas</TableCell>
-            <TableCell>Preço</TableCell>
-            <TableCell>Botão</TableCell>
-          </TableRow>
-        </TableHead>
+    <Box
+      height="80vh"
+      width="80vw"
+      display="flex"
+      flexDirection="column"
+      alignItems="center"
+      justifyContent="center"
+      margin="auto"
+      marginTop="50px"
+      marginBottom="50px"
+      gap={1}
+    >
+      <TableContainer component={Paper}>
+        <Table arial-label="simple table">
+          <TableHead>
+            <TableRow>
+              <TableCell>Avatar</TableCell>
+              <TableCell>Evento</TableCell>
+              <TableCell>Descrição</TableCell>
+              <TableCell>Data</TableCell>
+              <TableCell>Cidade</TableCell>
+              <TableCell>Local</TableCell>
+              <TableCell>Tipo</TableCell>
+              <TableCell>Vagas</TableCell>
+              <TableCell>Preço</TableCell>
+              <TableCell>Botão</TableCell>
+            </TableRow>
+          </TableHead>
 
-        <TableBody>
-          {ticketsList.map((ticketsRow) => (
-            <TableRow
-              key={ticketsRow.ticketId}
-              sx={{
-                '&:last-child td, &:last-child th': {
-                  border: 0,
-                },
-              }}
-            >
-              <TableCell>
-                <img
-                  src={ticketsRow.ticketAvatar}
-                  alt={ticketsRow.ticketName}
-                  width="50px"
-                  heigth="50px"
-                />
-              </TableCell>
-              <TableCell>{ticketsRow.ticketName}</TableCell>
-              <TableCell>
-                {ticketsRow.ticketDescription}
-              </TableCell>
-              <TableCell>{ticketsRow.ticketDate}</TableCell>
-              <TableCell>{ticketsRow.ticketCity}</TableCell>
-              <TableCell>
-                <Box
-                  sx={{
-                    display: 'flex',
-                    flexDirection: 'row',
-                    alignItems: 'center',
-                    gap: '5px',
-                  }}
-                >
+          <TableBody>
+            {ticketsList.map((ticketsRow) => (
+              <TableRow
+                key={ticketsRow.ticketId}
+                sx={{
+                  '&:last-child td, &:last-child th': {
+                    border: 0,
+                  },
+                }}
+              >
+                <TableCell>
+                  <img
+                    src={ticketsRow.ticketAvatar}
+                    alt={ticketsRow.ticketName}
+                    width="50px"
+                    heigth="50px"
+                  />
+                </TableCell>
+                <TableCell>
+                  {ticketsRow.ticketName}
+                </TableCell>
+                <TableCell>
+                  {ticketsRow.ticketDescription}
+                </TableCell>
+                <TableCell>
+                  {ticketsRow.ticketDate}
+                </TableCell>
+                <TableCell>
+                  {ticketsRow.ticketCity}
+                </TableCell>
+                <TableCell>
                   <Box
                     sx={{
-                      width: '10px',
-                      height: '10px',
-                      backgroundColor:
-                        ticketsRow.ticketOnline === true
-                          ? 'green'
-                          : 'gray',
-                      borderRadius: '50px',
+                      display: 'flex',
+                      flexDirection: 'row',
+                      alignItems: 'center',
+                      gap: '5px',
                     }}
-                  />
-                  {ticketsRow.ticketOnline === true
-                    ? 'Online'
-                    : 'Presencial'}
-                </Box>
-              </TableCell>
+                  >
+                    <Box
+                      sx={{
+                        width: '10px',
+                        height: '10px',
+                        backgroundColor:
+                          ticketsRow.ticketOnline === true
+                            ? 'green'
+                            : 'gray',
+                        borderRadius: '50px',
+                      }}
+                    />
+                    {ticketsRow.ticketOnline === true
+                      ? 'Online'
+                      : 'Presencial'}
+                  </Box>
+                </TableCell>
 
-              <TableCell>
-                {ticketsRow.ticketType === true
-                  ? 'Empresarial'
-                  : 'Acadêmico'}
-              </TableCell>
-              <TableCell>
-                {ticketsRow.ticketAvailable}
-              </TableCell>
-              <TableCell>
-                {ticketsRow.ticketPrice}
-              </TableCell>
-            </TableRow>
-          ))}
-        </TableBody>
-      </Table>
-    </TableContainer>
+                <TableCell>
+                  {ticketsRow.ticketType === true
+                    ? 'Empresarial'
+                    : 'Acadêmico'}
+                </TableCell>
+                <TableCell>
+                  {ticketsRow.ticketAvailable}
+                </TableCell>
+                <TableCell>
+                  {ticketsRow.ticketPrice}
+                </TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </TableContainer>
+    </Box>
   );
 }
 
