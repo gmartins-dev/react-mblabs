@@ -26,8 +26,16 @@ function TicketsTable() {
       <Table arial-label="simple table">
         <TableHead>
           <TableRow>
-            <TableCell>Id</TableCell>
-            <TableCell>Name</TableCell>
+            <TableCell>Avatar</TableCell>
+            <TableCell>Evento</TableCell>
+            <TableCell>Descrição</TableCell>
+            <TableCell>Data</TableCell>
+            <TableCell>Cidade</TableCell>
+            <TableCell>Online</TableCell>
+            <TableCell>Tipo</TableCell>
+            <TableCell>Vagas</TableCell>
+            <TableCell>Preço</TableCell>
+            <TableCell>Botão</TableCell>
           </TableRow>
         </TableHead>
 
@@ -41,8 +49,28 @@ function TicketsTable() {
                 },
               }}
             >
-              <TableCell>{ticketsRow.ticketId}</TableCell>
+              <TableCell>
+                <img
+                  src={ticketsRow.ticketAvatar}
+                  alt={ticketsRow.ticketName}
+                />
+              </TableCell>
               <TableCell>{ticketsRow.ticketName}</TableCell>
+              <TableCell>
+                {ticketsRow.ticketDescription}
+              </TableCell>
+              <TableCell>{ticketsRow.ticketDate}</TableCell>
+              <TableCell>{ticketsRow.ticketCity}</TableCell>
+              <TableCell>
+                {ticketsRow.ticketOnline}
+              </TableCell>
+              <TableCell>{ticketsRow.ticketType}</TableCell>
+              <TableCell>
+                {ticketsRow.ticketAvaliable}
+              </TableCell>
+              <TableCell>
+                {ticketsRow.ticketPrice}
+              </TableCell>
             </TableRow>
           ))}
         </TableBody>
