@@ -116,7 +116,6 @@ function TicketsTable() {
                       : 'Presencial'}
                   </Box>
                 </TableCell>
-
                 <TableCell>
                   {ticketsRow.ticketType === true
                     ? 'Empresarial'
@@ -133,7 +132,11 @@ function TicketsTable() {
           </TableBody>
           <TableFooter>
             {isLoading && (
-              <LinearProgress variant="indeterminate" />
+              <TableRow>
+                <TableCell colSpan={10}>
+                  <LinearProgress variant="indeterminate" />
+                </TableCell>
+              </TableRow>
             )}
           </TableFooter>
         </Table>
