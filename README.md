@@ -18,6 +18,9 @@ Infos: https://guilhermemm-dev.notion.site/Teste-MBLabs-a740915668d744a19bcfd3e8
 -   [x] Criar select empresarial/acadêmico
 -   [ ] Criar select online/presencial
 -   [ ] Criar "not found"
+-   [ ] Arredondar avatares
+-   [ ] Corrigir data
+-   [ ] Deixar tabela mais responsiva
 
 **Etapa de finalização:**
 -   [ ] Finalizar stylização

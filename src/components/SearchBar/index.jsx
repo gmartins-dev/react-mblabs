@@ -15,7 +15,7 @@ export default function SearchBar({ handleSearch }) {
         >
           <input
             type="text"
-            placeholder="Busque o evento desejado aqu..."
+            placeholder="Buscar..."
             onChange={(event) =>
               setSearchValue(event.target.value)
             }

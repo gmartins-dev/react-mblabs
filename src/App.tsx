@@ -16,6 +16,8 @@ function App() {
           display: 'flex',
           flexDirection: 'row',
           alignItems: 'center',
+          justifyContent: 'center',
+          margin: 'auto',
           gap: '5px',
         }}
       >

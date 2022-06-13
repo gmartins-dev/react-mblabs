@@ -4,7 +4,7 @@ export const Container = styled.div``;
 
 export const SearchBox = styled.div`
   background-color: transparent;
-  width: 300px;
+  width: 500px;
   padding: 15px;
   margin: 20px auto;
   display: flex;
@@ -12,6 +12,7 @@ export const SearchBox = styled.div`
   align-items: center;
   border-radius: 8px;
   box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
   input {
     background-color: transparent;
     height: 100%;
@@ -21,6 +22,7 @@ export const SearchBox = styled.div`
     color: #000;
     outline: none;
     margin-right: 8px;
+    box-sizing: border-box;
     &::placeholder {
       color: gray;
     }
@@ -35,15 +37,4 @@ export const SearchBox = styled.div`
       transform: scale(1.3);
     }
   }
-`;
-
-export const CheckBox = styled.div`
-  background-color: transparent;
-  margin: 20px auto;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
-  gap: 10px;
 `;
