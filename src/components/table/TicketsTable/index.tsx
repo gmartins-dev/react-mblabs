@@ -30,6 +30,20 @@ function TicketsTable({ search, select }) {
     fetchData();
   }, []);
 
+  interface IticketsList {
+    ticketCreatedAt: Date;
+    ticketName: string;
+    ticketAvatar: string;
+    ticketType: boolean;
+    ticketPrice: string;
+    ticketAvailable: number;
+    ticketDescription: string;
+    ticketCity: string;
+    ticketDate: Date;
+    ticketOnline: boolean;
+    ticketId: string;
+  }
+
   const StyledTableCell = styled(TableCell)(
     ({ theme }) => ({
       [`&.${tableCellClasses.head}`]: {
@@ -62,14 +76,14 @@ function TicketsTable({ search, select }) {
 
   return (
     <Box
-      height="80vh"
+      height="90vh"
       width="80vw"
       display="flex"
       flexDirection="column"
       alignItems="center"
       justifyContent="center"
       margin="auto"
-      marginTop="50px"
+      marginTop="30px"
       marginBottom="50px"
       gap={1}
     >
@@ -185,7 +199,11 @@ function TicketsTable({ search, select }) {
           <TableFooter>
             {isLoading && (
               <TableRow>
-                <StyledTableCell colSpan={10}>
+                <StyledTableCell
+                  colSpan={10}
+                  height={400}
+                  width={600}
+                >
                   <LinearProgress variant="indeterminate" />
                 </StyledTableCell>
               </TableRow>

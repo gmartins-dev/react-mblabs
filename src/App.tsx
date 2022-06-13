@@ -19,6 +19,7 @@ function App() {
           justifyContent: 'center',
           margin: 'auto',
           gap: '5px',
+          marginTop: '20px',
         }}
       >
         <SearchBar handleSearch={setSearch} />
