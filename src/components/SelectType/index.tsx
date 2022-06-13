@@ -9,7 +9,7 @@ import Select, {
 
 export default function SearchSelect({ ticketType }) {
   return (
-    <Box sx={{ minWidth: 150 }}>
+    <Box sx={{ minWidth: 100 }}>
       <FormControl fullWidth>
         <InputLabel id="search-select-label">
           Tipo
