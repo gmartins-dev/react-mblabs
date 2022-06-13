@@ -3,17 +3,20 @@ import api from '../../../services/api.ts';
 import {
   TableContainer,
   Table,
+  TableCell,
   TableHead,
   TableBody,
   TableRow,
-  TableCell,
   Paper,
   Box,
   LinearProgress,
   TableFooter,
+  Button,
+  styled,
 } from '@mui/material';
+import { tableCellClasses } from '@mui/material/TableCell';
 
-function TicketsTable() {
+function TicketsTable({ search }) {
   const [ticketsList, setTicketsList] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -26,6 +29,28 @@ function TicketsTable() {
     }
     fetchData();
   }, []);
+
+  const StyledTableCell = styled(TableCell)(
+    ({ theme }) => ({
+      [`&.${tableCellClasses.head}`]: {
+        backgroundColor: theme.palette.primary.main,
+        color: theme.palette.common.white,
+      },
+      [`&.${tableCellClasses.body}`]: {
+        fontSize: 14,
+      },
+    }),
+  );
+
+  const StyledTableRow = styled(TableRow)(({ theme }) => ({
+    '&:nth-of-type(odd)': {
+      backgroundColor: theme.palette.action.hover,
+    },
+    // hide last border
+    '&:last-child td, &:last-child th': {
+      border: 0,
+    },
+  }));
 
   return (
     <Box
@@ -48,94 +73,113 @@ function TicketsTable() {
         <Table arial-label="simple table" stickyHeader>
           <TableHead>
             <TableRow>
-              <TableCell>Avatar</TableCell>
-              <TableCell>Evento</TableCell>
-              <TableCell>Descrição</TableCell>
-              <TableCell>Data</TableCell>
-              <TableCell>Cidade</TableCell>
-              <TableCell>Local</TableCell>
-              <TableCell>Tipo</TableCell>
-              <TableCell>Vagas</TableCell>
-              <TableCell>Preço</TableCell>
-              <TableCell>Botão</TableCell>
+              <StyledTableCell align="center"></StyledTableCell>
+              <StyledTableCell>Evento</StyledTableCell>
+              <StyledTableCell>Descrição</StyledTableCell>
+              <StyledTableCell>Data</StyledTableCell>
+              <StyledTableCell>Cidade</StyledTableCell>
+              <StyledTableCell>Local</StyledTableCell>
+              <StyledTableCell>Tipo</StyledTableCell>
+              <StyledTableCell>Vagas</StyledTableCell>
+              <StyledTableCell>Preço</StyledTableCell>
+              <StyledTableCell align="center">
+                Comprar
+              </StyledTableCell>
             </TableRow>
           </TableHead>
 
           <TableBody>
-            {ticketsList.map((ticketsRow) => (
-              <TableRow
-                key={ticketsRow.ticketId}
-                sx={{
-                  '&:last-child td, &:last-child th': {
-                    border: 0,
-                  },
-                }}
-              >
-                <TableCell>
-                  <img
-                    src={ticketsRow.ticketAvatar}
-                    alt={ticketsRow.ticketName}
-                    width="50px"
-                    heigth="50px"
-                  />
-                </TableCell>
-                <TableCell>
-                  {ticketsRow.ticketName}
-                </TableCell>
-                <TableCell>
-                  {ticketsRow.ticketDescription}
-                </TableCell>
-                <TableCell>
-                  {ticketsRow.ticketDate}
-                </TableCell>
-                <TableCell>
-                  {ticketsRow.ticketCity}
-                </TableCell>
-                <TableCell>
-                  <Box
-                    sx={{
-                      display: 'flex',
-                      flexDirection: 'row',
-                      alignItems: 'center',
-                      gap: '5px',
-                    }}
-                  >
+            {ticketsList
+              .filter((ticketsRow) => {
+                if (search === '') {
+                  return ticketsRow;
+                } else if (
+                  ticketsRow.ticketName
+                    .toLowerCase()
+                    .includes(search.toLowerCase())
+                ) {
+                  return ticketsRow;
+                }
+              })
+              .map((ticketsRow) => (
+                <StyledTableRow
+                  key={ticketsRow.ticketId}
+                  sx={{
+                    '&:last-child td, &:last-child th': {
+                      border: 0,
+                    },
+                  }}
+                >
+                  <StyledTableCell>
+                    <img
+                      src={ticketsRow.ticketAvatar}
+                      alt={ticketsRow.ticketName}
+                      width="50px"
+                      heigth="50px"
+                    />
+                  </StyledTableCell>
+                  <StyledTableCell>
+                    {ticketsRow.ticketName}
+                  </StyledTableCell>
+                  <StyledTableCell>
+                    {ticketsRow.ticketDescription}
+                  </StyledTableCell>
+                  <StyledTableCell>
+                    {ticketsRow.ticketDate}
+                  </StyledTableCell>
+                  <StyledTableCell>
+                    {ticketsRow.ticketCity}
+                  </StyledTableCell>
+                  <StyledTableCell>
                     <Box
                       sx={{
-                        width: '10px',
-                        height: '10px',
-                        backgroundColor:
-                          ticketsRow.ticketOnline === true
-                            ? 'green'
-                            : 'gray',
-                        borderRadius: '50px',
+                        display: 'flex',
+                        flexDirection: 'row',
+                        alignItems: 'center',
+                        gap: '5px',
                       }}
-                    />
-                    {ticketsRow.ticketOnline === true
-                      ? 'Online'
-                      : 'Presencial'}
-                  </Box>
-                </TableCell>
-                <TableCell>
-                  {ticketsRow.ticketType === true
-                    ? 'Empresarial'
-                    : 'Acadêmico'}
-                </TableCell>
-                <TableCell>
-                  {ticketsRow.ticketAvailable}
-                </TableCell>
-                <TableCell>
-                  {ticketsRow.ticketPrice}
-                </TableCell>
-              </TableRow>
-            ))}
+                    >
+                      <Box
+                        sx={{
+                          width: '10px',
+                          height: '10px',
+                          backgroundColor:
+                            ticketsRow.ticketOnline === true
+                              ? 'green'
+                              : 'gray',
+                          borderRadius: '50px',
+                        }}
+                      />
+                      {ticketsRow.ticketOnline === true
+                        ? 'Online'
+                        : 'Presencial'}
+                    </Box>
+                  </StyledTableCell>
+                  <StyledTableCell>
+                    {ticketsRow.ticketType === true
+                      ? 'Empresarial'
+                      : 'Acadêmico'}
+                  </StyledTableCell>
+                  <StyledTableCell>
+                    {ticketsRow.ticketAvailable}
+                  </StyledTableCell>
+                  <StyledTableCell>
+                    R$&nbsp;{ticketsRow.ticketPrice}
+                  </StyledTableCell>
+                  <StyledTableCell>
+                    <Button variant="outlined">
+                      Comprar
+                    </Button>
+                  </StyledTableCell>
+                </StyledTableRow>
+              ))}
           </TableBody>
           <TableFooter>
             {isLoading && (
               <TableRow>
-                <TableCell colSpan={10}>
+                <StyledTableCell colSpan={10}>
                   <LinearProgress variant="indeterminate" />
-                </TableCell>
+                </StyledTableCell>
               </TableRow>
             )}
           </TableFooter>
