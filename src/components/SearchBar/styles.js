@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.div``;
 
 export const SearchBox = styled.div`
-  background-color: rgba(55, 55, 55, 0.2);
+  background-color: transparent;
   width: 300px;
   padding: 15px;
   margin: 20px auto;
