@@ -16,7 +16,7 @@ import {
 } from '@mui/material';
 import { tableCellClasses } from '@mui/material/TableCell';
 
-function TicketsTable({ search }) {
+function TicketsTable({ search, select }) {
   const [ticketsList, setTicketsList] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -51,6 +51,14 @@ function TicketsTable({ search }) {
       border: 0,
     },
   }));
+
+  const filterData = ticketsList.filter((result) => {
+    if (select === 1) {
+      return result;
+    } else {
+      return select === result.ticketType;
+    }
+  });
 
   return (
     <Box
@@ -89,7 +97,7 @@ function TicketsTable({ search }) {
           </TableHead>
 
           <TableBody>
-            {ticketsList
+            {filterData
               .filter((ticketsRow) => {
                 if (search === '') {
                   return ticketsRow;

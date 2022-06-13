@@ -7,13 +7,9 @@ import Select, {
   SelectChangeEvent,
 } from '@mui/material/Select';
 
-export default function SearchSelect({ handleSelect }) {
-  const [ticketType, setTicketType] = useState('');
-
-  console.log(ticketType);
-
+export default function SearchSelect({ ticketType }) {
   return (
-    <Box sx={{ minWidth: 120 }}>
+    <Box sx={{ minWidth: 150 }}>
       <FormControl fullWidth>
         <InputLabel id="search-select-label">
           Tipo
@@ -23,11 +19,11 @@ export default function SearchSelect({ handleSelect }) {
           id="search-select"
           value={ticketType}
           label="ticketType"
-          onChange={(e) => setTicketType(e.target.value)}
+          onChange={(e) => ticketType(e.target.value)}
         >
           <MenuItem value={1}>Todos</MenuItem>
-          <MenuItem value={2}>Empresarial</MenuItem>
-          <MenuItem value={3}>Acadêmico</MenuItem>
+          <MenuItem value={true}>Empresarial</MenuItem>
+          <MenuItem value={false}>Acadêmico</MenuItem>
         </Select>
       </FormControl>
     </Box>

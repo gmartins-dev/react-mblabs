@@ -6,6 +6,7 @@ import SearchSelect from '../src/components/SearchSelect';
 import { Box } from '@mui/material';
 function App() {
   const [search, setSearch] = useState('');
+  const [ticketType, setTicketType] = useState(1);
 
   return (
     <>
@@ -19,10 +20,10 @@ function App() {
         }}
       >
         <SearchBar handleSearch={setSearch} />
-        <SearchSelect />
+        <SearchSelect ticketType={setTicketType} />
       </Box>
 
-      <TicketsTable search={search} />
+      <TicketsTable search={search} select={ticketType} />
     </>
   );
 }
