@@ -1,25 +1,26 @@
-### To-do List:
+Infos: https://guilhermemm-dev.notion.site/Teste-MBLabs-a740915668d744a19bcfd3e806c9f8b8
 
-- [x]  Apresentar esboço inicial do projeto para o grupo
-- [x]  Criar escopo do projeto
-- [x]  Criar repositorio
-- [x]  Iniciar o projeto usando o ViteJs
-- [x]  Instalar dependencias iniciais
+**To-do List:**
 
-- Estrutura do projeto:
-- [x]  Criar API mock/faker
-- [x]  Criar tela principal
-- [x]  Criar tabela
-- [x]  Criar loading
-- [x]  Criar search bar
-- [x]  Criar select empresarial/acadêmico
-- []  Criar select online/presencial
+-   **Pré-produção:**
+-   [x] Apresentar esboço inicial do projeto para o grupo
+-   [x] Criar escopo do projeto
+-   [x] Criar repositorio
+-   [x] Iniciar o projeto usando o ViteJs
+-   [x] Instalar dependencias iniciais
+-   **Estrutura do projeto:**
+-   [x] Criar API mock/faker
+-   [x] Criar tela principal
+-   [x] Criar tabela
+-   [x] Criar loading
+-   [ ] Criar search bar
+-   [ ] Criar select (filtro)
 
-- Etapa de finalização:
-- []  Finalizar stylização
-- []  Aplicar clean code
-- []  Conferir typagens
+**Etapa de finalização:**
 
-- Pós-produção:
-- [ ]  Criar README.md
-- [ ]  Preparar apresentação para o grupo
+-   [ ] Finalizar stylização
+-   [ ] Aplicar clean code
+-   [ ] Conferir typagem
+-   **Pós-produção**:
+-   [ ] Criar [README.md](http://README.md)
+-   [ ] Preparar apresentação para o grupo
