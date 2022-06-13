@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import api from '../../../services/api.ts';
+import api from '../../../services/api';
 import {
   TableContainer,
   Table,
@@ -16,8 +16,24 @@ import {
 } from '@mui/material';
 import { tableCellClasses } from '@mui/material/TableCell';
 
-function TicketsTable({ search, select }) {
-  const [ticketsList, setTicketsList] = useState([]);
+interface IticketsList {
+  ticketCreatedAt: Date;
+  ticketName: string;
+  ticketAvatar: string;
+  ticketType: boolean;
+  ticketPrice: string;
+  ticketAvailable: number;
+  ticketDescription: string;
+  ticketCity: string;
+  ticketDate: string;
+  ticketOnline: boolean;
+  ticketId: string;
+}
+
+function TicketsTable({ search, select, online }) {
+  const [ticketsList, setTicketsList] = useState<
+    IticketsList[]
+  >([]);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -29,20 +45,6 @@ function TicketsTable({ search, select }) {
     }
     fetchData();
   }, []);
-
-  interface IticketsList {
-    ticketCreatedAt: Date;
-    ticketName: string;
-    ticketAvatar: string;
-    ticketType: boolean;
-    ticketPrice: string;
-    ticketAvailable: number;
-    ticketDescription: string;
-    ticketCity: string;
-    ticketDate: Date;
-    ticketOnline: boolean;
-    ticketId: string;
-  }
 
   const StyledTableCell = styled(TableCell)(
     ({ theme }) => ({
@@ -73,6 +75,13 @@ function TicketsTable({ search, select }) {
       return select === result.ticketType;
     }
   });
+
+  function formatDate(date: string) {
+    const [datetime, time] = date.split('T');
+    const [year, month, day] = datetime.split('-');
+
+    return `${day}/${month}/${year}`;
+  }
 
   return (
     <Box
@@ -123,6 +132,13 @@ function TicketsTable({ search, select }) {
                   return ticketsRow;
                 }
               })
+              .filter((result) => {
+                if (online === 1) {
+                  return result;
+                } else {
+                  return online === result.ticketOnline;
+                }
+              })
               .map((ticketsRow) => (
                 <StyledTableRow
                   key={ticketsRow.ticketId}
@@ -137,7 +153,7 @@ function TicketsTable({ search, select }) {
                       src={ticketsRow.ticketAvatar}
                       alt={ticketsRow.ticketName}
                       width="50px"
-                      heigth="50px"
+                      height="50px"
                     />
                   </StyledTableCell>
                   <StyledTableCell>
@@ -147,7 +163,7 @@ function TicketsTable({ search, select }) {
                     {ticketsRow.ticketDescription}
                   </StyledTableCell>
                   <StyledTableCell>
-                    {ticketsRow.ticketDate}
+                    {formatDate(ticketsRow.ticketDate)}
                   </StyledTableCell>
                   <StyledTableCell>
                     {ticketsRow.ticketCity}

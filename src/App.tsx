@@ -7,6 +7,7 @@ import { Box } from '@mui/material';
 function App() {
   const [search, setSearch] = useState('');
   const [ticketType, setTicketType] = useState(1);
+  const [ticketOnline, setTicketOnline] = useState(1);
 
   return (
     <>
@@ -24,9 +25,14 @@ function App() {
       >
         <SearchBar handleSearch={setSearch} />
         <SelectType ticketType={setTicketType} />
+        <SelectType ticketType={setTicketOnline} />
       </Box>
 
-      <TicketsTable search={search} select={ticketType} />
+      <TicketsTable
+        search={search}
+        select={ticketType}
+        online={ticketOnline}
+      />
     </>
   );
 }
