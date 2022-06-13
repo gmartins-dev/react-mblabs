@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ### To-do List:
 
 - [x]  Apresentar esboço inicial do projeto para o grupo
@@ -24,7 +23,3 @@
 - Pós-produção:
 - [ ]  Criar README.md
 - [ ]  Preparar apresentação para o grupo
-=======
-# react-mblabs
-Em andamento
->>>>>>> c2f8045ab04cb49d11147a05ae105e3ad94d8522

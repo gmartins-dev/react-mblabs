@@ -11,13 +11,14 @@
 - [x]  Criar tela principal
 - [x]  Criar tabela
 - [x]  Criar loading
-- []  Criar search bar
-- []  Criar select (filtro)
+- [x]  Criar search bar
+- [x]  Criar select empresarial/acadêmico
+- []  Criar select online/presencial
 
 - Etapa de finalização:
 - []  Finalizar stylização
 - []  Aplicar clean code
-- []  Conferir typagem
+- []  Conferir typagens
 
 - Pós-produção:
 - [ ]  Criar README.md
