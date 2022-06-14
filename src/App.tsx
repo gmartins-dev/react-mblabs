@@ -2,7 +2,7 @@ import './App.css';
 import { useState } from 'react';
 import { Box } from '@mui/material';
 import SearchSelect from './components/SearchSelect';
-import TicketsTable from '../src/components/table/TicketsTable';
+import TicketsTable from '../src/components/TicketsTable';
 import SearchBar from '../src/components/SearchBar';
 
 function App() {
