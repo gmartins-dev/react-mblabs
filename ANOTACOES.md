@@ -1,4 +1,5 @@
 Infos: https://guilhermemm-dev.notion.site/Teste-MBLabs-a740915668d744a19bcfd3e806c9f8b8
+Repositório: https://github.com/guilhermemm-dev/react-mblabs
 
 **To-do List:**
 
@@ -16,17 +17,14 @@ Infos: https://guilhermemm-dev.notion.site/Teste-MBLabs-a740915668d744a19bcfd3e8
 -   [x] Criar loading
 -   [x] Criar search bar
 -   [x] Criar select empresarial/acadêmico
--   [ ] Criar select online/presencial
--   [ ] Criar "not found"
--   [ ] Arredondar avatares
--   [x] Corrigir data
--   [ ] Deixar tabela mais responsiva
+-   [x] Criar select online/presencial
+-   [x] Corrigir formato da data
 
 **Etapa de finalização:**
--   [ ] Finalizar stylização
--   [ ] Aplicar clean code
--   [ ] Conferir typagens
+-   [x] Finalizar stylização
+-   [x] Aplicar clean code
+-   [+-] Conferir typagens
 
 -   **Pós-produção**:
--   [ ] Criar README.md
--   [ ] Preparar apresentação para o grupo
+-   [x] Criar README.md
+-   [x] Preparar apresentação para o grupo
