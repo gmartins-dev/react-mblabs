@@ -19,7 +19,7 @@ Infos: https://guilhermemm-dev.notion.site/Teste-MBLabs-a740915668d744a19bcfd3e8
 -   [ ] Criar select online/presencial
 -   [ ] Criar "not found"
 -   [ ] Arredondar avatares
--   [ ] Corrigir data
+-   [x] Corrigir data
 -   [ ] Deixar tabela mais responsiva
 
 **Etapa de finalização:**

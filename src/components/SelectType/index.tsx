@@ -7,7 +7,11 @@ import Select, {
   SelectChangeEvent,
 } from '@mui/material/Select';
 
-export default function SearchSelect({ ticketType }) {
+export default function SearchSelect({
+  ticketType,
+  setTicketType,
+  values,
+}) {
   return (
     <Box sx={{ minWidth: 100 }}>
       <FormControl fullWidth>
@@ -19,11 +23,13 @@ export default function SearchSelect({ ticketType }) {
           id="search-select"
           value={ticketType}
           label="ticketType"
-          onChange={(e) => ticketType(e.target.value)}
+          onChange={(e) => setTicketType(e.target.value)}
         >
-          <MenuItem value={1}>Todos</MenuItem>
-          <MenuItem value={true}>Empresarial</MenuItem>
-          <MenuItem value={false}>Acadêmico</MenuItem>
+          {values.map((name) => (
+            <MenuItem key={name} value={name}>
+              {name}
+            </MenuItem>
+          ))}
         </Select>
       </FormControl>
     </Box>

@@ -6,8 +6,8 @@ import SelectType from './components/SelectType';
 import { Box } from '@mui/material';
 function App() {
   const [search, setSearch] = useState('');
-  const [ticketType, setTicketType] = useState(1);
-  const [ticketOnline, setTicketOnline] = useState(1);
+  const [ticketType, setTicketType] = useState('Todos');
+  const [ticketOnline, setTicketOnline] = useState('Todos');
 
   return (
     <>
@@ -24,8 +24,16 @@ function App() {
         }}
       >
         <SearchBar handleSearch={setSearch} />
-        <SelectType ticketType={setTicketType} />
-        <SelectType ticketType={setTicketOnline} />
+        <SelectType
+          ticketType={ticketType}
+          setTicketType={setTicketType}
+          values={['Todos', 'Empresarial', 'Acadêmico']}
+        />
+        <SelectType
+          ticketType={ticketType}
+          setTicketType={setTicketType}
+          values={['Todos', 'Online', 'Presencial']}
+        />
       </Box>
 
       <TicketsTable

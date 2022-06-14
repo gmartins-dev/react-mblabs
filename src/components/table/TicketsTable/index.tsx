@@ -69,7 +69,7 @@ function TicketsTable({ search, select, online }) {
   }));
 
   const filterData = ticketsList.filter((result) => {
-    if (select === 1) {
+    if (select === 'Todos') {
       return result;
     } else {
       return select === result.ticketType;
@@ -82,6 +82,9 @@ function TicketsTable({ search, select, online }) {
 
     return `${day}/${month}/${year}`;
   }
+
+  console.log(select);
+  console.log(online);
 
   return (
     <Box
@@ -122,7 +125,7 @@ function TicketsTable({ search, select, online }) {
           <TableBody>
             {filterData
               .filter((ticketsRow) => {
-                if (search === '') {
+                if (search === 'Todos') {
                   return ticketsRow;
                 } else if (
                   ticketsRow.ticketName
@@ -133,7 +136,7 @@ function TicketsTable({ search, select, online }) {
                 }
               })
               .filter((result) => {
-                if (online === 1) {
+                if (online === 'Todos') {
                   return result;
                 } else {
                   return online === result.ticketOnline;
