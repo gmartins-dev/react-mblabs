@@ -92,14 +92,14 @@ function TicketsTable({ search, select, online }) {
       alignItems="center"
       justifyContent="center"
       margin="auto"
-      marginTop="30px"
-      marginBottom="50px"
+      marginTop="-10px"
+      marginBottom="30px"
       gap={1}
     >
       <TableContainer
         component={Paper}
         variant="outlined"
-        sx={{ m: 1, width: 'auto' }}
+        sx={{ m: 1, width: 'auto', maxHeight: '90%' }}
       >
         <Table arial-label="simple table" stickyHeader>
           <TableHead>
