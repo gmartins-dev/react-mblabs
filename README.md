@@ -73,6 +73,14 @@ API schema:
 
 </p>
 
+JSON retornado pela API:
+
+<p  align="center">
+
+<img  alt="API schema"  src="https://images2.imgbox.com/8a/f0/LGnyWNZE_o.png" />
+
+</p>
+
   
 
 ## 💻 Demonstração
