@@ -1,9 +1,10 @@
-import TicketsTable from '../src/components/table/TicketsTable';
-import SearchBar from '../src/components/SearchBar';
 import './App.css';
 import { useState } from 'react';
-import SearchSelect from './components/SearchSelect';
 import { Box } from '@mui/material';
+import SearchSelect from './components/SearchSelect';
+import TicketsTable from '../src/components/table/TicketsTable';
+import SearchBar from '../src/components/SearchBar';
+
 function App() {
   const [search, setSearch] = useState('');
   const [ticketType, setTicketType] = useState('Todos');
@@ -21,8 +22,8 @@ function App() {
       value: true,
     },
     academico: {
-      id: 'Academico',
-      nome: 'Academico',
+      id: 'Acadêmico',
+      nome: 'Acadêmico',
       value: false,
     },
   };
@@ -43,7 +44,6 @@ function App() {
 
   return (
     <>
-      <header>App header teste</header>
       <Box
         sx={{
           display: 'flex',

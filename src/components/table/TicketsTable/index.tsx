@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import api from '../../../services/api';
+
 import {
   TableContainer,
   Table,
@@ -62,7 +63,6 @@ function TicketsTable({ search, select, online }) {
     '&:nth-of-type(odd)': {
       backgroundColor: theme.palette.action.hover,
     },
-    // hide last border
     '&:last-child td, &:last-child th': {
       border: 0,
     },
@@ -133,8 +133,6 @@ function TicketsTable({ search, select, online }) {
                 }
               })
               .filter((result) => {
-                // console.log('Online', result);
-
                 if (online === 'Todos') {
                   return result;
                 } else {
