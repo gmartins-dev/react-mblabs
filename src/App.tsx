@@ -2,7 +2,7 @@ import TicketsTable from '../src/components/table/TicketsTable';
 import SearchBar from '../src/components/SearchBar';
 import './App.css';
 import { useState } from 'react';
-import SelectType from './components/SelectType';
+import SearchSelect from './components/SearchSelect';
 import { Box } from '@mui/material';
 function App() {
   const [search, setSearch] = useState('');
@@ -56,7 +56,7 @@ function App() {
         }}
       >
         <SearchBar handleSearch={setSearch} />
-        <SelectType
+        <SearchSelect
           ticketType={ticketType}
           setTicketType={setTicketType}
           values={[
@@ -65,7 +65,7 @@ function App() {
             TicketType.academico,
           ]}
         />
-        <SelectType
+        <SearchSelect
           ticketType={ticketOnline}
           setTicketType={setTicketOnline}
           values={[
