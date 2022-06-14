@@ -81,40 +81,6 @@ JSON retornado pela API:
 
 </p>
 
-  
-
-## 💻 Demonstração
-
-  
-
-<p  align="center">
-
-<img  alt="Print1" width="1200px" src="https://images2.imgbox.com/cf/1b/md8r7Ja3_o.png" />
-
-</p>
-
-<p  align="center">
-
-<img  alt="Print2" width="1200px" src="https://images2.imgbox.com/09/90/AIMYw3Pw_o.png" />
-
-</p>
-
-<p  align="center">
-
-<img  alt="Print3" width="1200px" src="https://images2.imgbox.com/cb/cd/N7NwfRfO_o.png" />
-
-</p>
-
-<p  align="center">
-
-<img  alt="Print4" width="1200px" src="https://images2.imgbox.com/9a/7e/blkrY5Eg_o.png" />
-
-</p>
-
-  
-  
-  
-
 ## 🛠 Possiveis melhorias/upgrades:
 
   
@@ -166,6 +132,40 @@ Esse projeto foi utilizou das seguintes libs:
 - material-ui
 
 - styled-components
+
+
+## 💻 Demonstração
+
+  
+
+<p  align="center">
+
+<img  alt="Print1" width="1200px" src="https://images2.imgbox.com/cf/1b/md8r7Ja3_o.png" />
+
+</p>
+
+<p  align="center">
+
+<img  alt="Print2" width="1200px" src="https://images2.imgbox.com/09/90/AIMYw3Pw_o.png" />
+
+</p>
+
+<p  align="center">
+
+<img  alt="Print3" width="1200px" src="https://images2.imgbox.com/cb/cd/N7NwfRfO_o.png" />
+
+</p>
+
+<p  align="center">
+
+<img  alt="Print4" width="1200px" src="https://images2.imgbox.com/9a/7e/blkrY5Eg_o.png" />
+
+</p>
+
+  
+  
+  
+
 
   
   
