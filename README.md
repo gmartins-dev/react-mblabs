@@ -69,7 +69,7 @@ API schema:
 
 <p  align="center">
 
-<img  alt="API schema"  width="400px"  src="https://images2.imgbox.com/32/6c/SMR7QkbY_o.jpeg" />
+<img  alt="API schema"  width="600px"  src="https://images2.imgbox.com/32/6c/SMR7QkbY_o.jpeg" />
 
 </p>
 
@@ -77,7 +77,7 @@ JSON retornado pela API:
 
 <p  align="center">
 
-<img  alt="API schema" width="400px"  src="https://images2.imgbox.com/8a/f0/LGnyWNZE_o.png" />
+<img  alt="API schema" width="600px"  src="https://images2.imgbox.com/8a/f0/LGnyWNZE_o.png" />
 
 </p>
 
