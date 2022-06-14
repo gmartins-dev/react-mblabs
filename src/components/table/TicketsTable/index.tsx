@@ -83,9 +83,6 @@ function TicketsTable({ search, select, online }) {
     return `${day}/${month}/${year}`;
   }
 
-  console.log(select);
-  console.log(online);
-
   return (
     <Box
       height="90vh"
@@ -136,6 +133,8 @@ function TicketsTable({ search, select, online }) {
                 }
               })
               .filter((result) => {
+                // console.log('Online', result);
+
                 if (online === 'Todos') {
                   return result;
                 } else {

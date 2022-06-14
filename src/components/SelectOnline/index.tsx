@@ -18,9 +18,9 @@ export default function SelectOnline({ ticketOnline }) {
           label="ticketOnline"
           onChange={(e) => ticketOnline(e.target.value)}
         >
-          <MenuItem value={1}>Todos</MenuItem>
-          <MenuItem value={true}>Online</MenuItem>
-          <MenuItem value={false}>Presencial</MenuItem>
+          <MenuItem value="Todos">Todos</MenuItem>
+          <MenuItem value="Online">Online</MenuItem>
+          <MenuItem value="Presencial">Presencial</MenuItem>
         </Select>
       </FormControl>
     </Box>

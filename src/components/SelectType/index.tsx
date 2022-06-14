@@ -12,6 +12,7 @@ export default function SearchSelect({
   setTicketType,
   values,
 }) {
+  console.log(values);
   return (
     <Box sx={{ minWidth: 100 }}>
       <FormControl fullWidth>
@@ -25,11 +26,13 @@ export default function SearchSelect({
           label="ticketType"
           onChange={(e) => setTicketType(e.target.value)}
         >
-          {values.map((name) => (
-            <MenuItem key={name} value={name}>
-              {name}
-            </MenuItem>
-          ))}
+          {values.map((name) => {
+            return (
+              <MenuItem key={name.id} value={name.value}>
+                {name.nome}
+              </MenuItem>
+            );
+          })}
         </Select>
       </FormControl>
     </Box>
