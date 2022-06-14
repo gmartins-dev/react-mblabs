@@ -131,7 +131,6 @@ Esse projeto foi utilizou das seguintes libs:
 
 - material-ui
 
-- styled-components
 
 
 ## 💻 Demonstração
