@@ -87,9 +87,29 @@ JSON retornado pela API:
 
   
 
-Pode ser acessada online atráves do link:
+<p  align="center">
 
-https://###/
+<img  alt="Print1" width="800px" src="https://images2.imgbox.com/cf/1b/md8r7Ja3_o.png" />
+
+</p>
+
+<p  align="center">
+
+<img  alt="Print2" width="800px" src="https://images2.imgbox.com/09/90/AIMYw3Pw_o.png" />
+
+</p>
+
+<p  align="center">
+
+<img  alt="Print3" width="800px" src="https://images2.imgbox.com/cb/cd/N7NwfRfO_o.png" />
+
+</p>
+
+<p  align="center">
+
+<img  alt="Print4" width="800px" src="https://images2.imgbox.com/9a/7e/blkrY5Eg_o.png" />
+
+</p>
 
   
   
@@ -188,34 +208,10 @@ Cor secundária: #FFFFFF
   
   
 
-<hr/>
-
   
   
 
-<p  align="center">
 
-<img  alt="Print1"  src="https://images2.imgbox.com/cf/1b/md8r7Ja3_o.png" />
-
-</p>
-
-<p  align="center">
-
-<img  alt="Print2"  src="https://images2.imgbox.com/09/90/AIMYw3Pw_o.png" />
-
-</p>
-
-<p  align="center">
-
-<img  alt="Print3"  src="https://images2.imgbox.com/cb/cd/N7NwfRfO_o.png" />
-
-</p>
-
-<p  align="center">
-
-<img  alt="Print4"  src="https://images2.imgbox.com/9a/7e/blkrY5Eg_o.png" />
-
-</p>
 
   
 
