@@ -51,6 +51,7 @@ https://###/
  3. Dashboard para gerenciamento e criação de eventos
  4. Melhorias de UI/UX
  5. Melhorias na responsividade/acessibilidade
+ 6. Criar design/select de modo "light/dark"
  
 ## 🧪 Tecnologias
 
